@@ -6,12 +6,23 @@ body {
   color: #111;
 }
 .navbar .container-fluid {
-  padding: 0;
+  padding-left: 0;
 }
 .navbar-header {
   float: right;
+  width: 100%;
   .navbar-brand {
-    font-size: 20px;
+    font-size: 24px;
+    float: right;
+  }
+}
+.navbar-toggle {
+  float: left;
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .navbar-header {
+    width: auto;
   }
 }
 .navbar-nav > li {
