@@ -1,0 +1,32 @@
+{
+  "name": "ArabicWebFonts",
+  "version": "0.0.1",
+  "homepage": "http://arabicwebfonts.github.io/Fonts/",
+  "authors": [
+    "Ammar Alakkad <am.alakkad@gmail.com>"
+  ],
+  "description": "Repository for providing Arabic web fonts, use it directly from GitHub.",
+  "keywords": [
+    "fonts",
+    "web-font",
+    "webfont"
+  ],
+  "license": "MIT",
+  "private": true,
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "~3.1.1",
+    "angular": "*"
+  }
+}

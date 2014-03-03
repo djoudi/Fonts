@@ -1,0 +1,26 @@
+{
+  "name": "ArabicWebFonts",
+  "version": "0.0.1",
+  "homepage": "http://arabicwebfonts.github.io/Fonts/",
+  "description": "Repository for providing Arabic web fonts, use it directly from GitHub.",
+  "license": "MIT",
+  "author": {
+    "name": "Ammar Alakkad",
+    "url": "http://aalakkad.github.io/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ArabicWebFonts/Fonts"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-qunit": "~0.3.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.4.0"
+  }
+}
