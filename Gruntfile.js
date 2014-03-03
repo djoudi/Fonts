@@ -18,7 +18,7 @@ module.exports = function(grunt) {
       },
       dist: {
         src: ['lib/<%= pkg.name %>.js'],
-        dest: 'dist/<%= pkg.name %>.js'
+        dest: 'dist/js/<%= pkg.name %>.js'
       }
     },
     uglify: {
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
       },
       dist: {
         src: '<%= concat.dist.dest %>',
-        dest: 'dist/<%= pkg.name %>.min.js'
+        dest: 'dist/js/<%= pkg.name %>.min.js'
       }
     },
     jshint: {
@@ -56,22 +56,38 @@ module.exports = function(grunt) {
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
         tasks: ['jshint:gruntfile']
+      },
+      style: {
+        files: ['lib/style/**/*.scss'],
+        tasks: ['sass'],
+        options: {
+          interrupt: true,
+          livereload: true,
+          spawn: false
+        }
+      }
+    },
+    sass: {
+      dist: {
+        files: {
+          'dist/css/style.css': ['lib/style/*.scss']
+        }
       }
     },
     connect: {
-    	server: {
-    		options: {
-    			port: 8080,
-    			livereload: true,
-    			useAvailablePort: true,
-    			keepalive: true
-    		}
-    	}
+      server: {
+        options: {
+          port: 8080,
+          useAvailablePort: true,
+          keepalive: true
+        }
+      }
     }
   });
 
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-jshint');
